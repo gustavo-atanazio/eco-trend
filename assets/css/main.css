@@ -1,6 +1,19 @@
+@import url('./header.css');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+
+/* Bootstrap */
+.carousel-control-prev { justify-content: flex-start; }
+.carousel-control-next { justify-content: flex-end; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.carousel-inner { padding: 0 2rem; }
