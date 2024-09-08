@@ -1,5 +1,47 @@
-<header id='header'>
-  <i class='fa-solid fa-bars'></i>
+<header id='header' class='navbar navbar-expand-lg'>
+  <button
+    id='menu-toggle'
+    class='navbar-toggler'
+    type='button'
+    data-bs-toggle='collapse'
+    data-bs-target='#navbarNav'
+    aria-controls='navbarNav'
+    aria-expanded='false'
+    aria-label='Toggle navigation'
+  >
+    <i class='fa-solid fa-bars'></i>
+  </button>
 
-  <i class='fa-solid fa-cart-shopping'></i>
+  <a class='navbar-brand' href='../index.html'>
+    <img src='https://placehold.co/200x65' alt='Placeholder'>
+  </a>
+
+  <button class='btn d-lg-none' type='button'>
+    <i class='fa-solid fa-cart-shopping'></i>
+  </button>
+
+  <div class='collapse navbar-collapse' id='navbarNav'>
+    <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+      <li class='nav-item'>
+        <a class='nav-link' href='../index.html'>Home</a>
+      </li>
+
+      <li class='nav-item'>
+        <a class='nav-link' href='../pages/categories.html'>Categorias</a>
+      </li>
+
+      <li class='nav-item'>
+        <a class='nav-link' href='../pages/contact.html'>Contato</a>
+      </li>
+    </ul>
+
+    <form class='d-flex'>
+      <input class='form-control me-2' type='search' placeholder='Procure um produto...' aria-label='Search'>
+      <button class='btn btn-outline-success' type='submit'>Pesquisar</button>
+    </form>
+
+    <button class='btn d-none d-lg-block'>
+      <i class='fa-solid fa-cart-shopping'></i>
+    </button>
+  </div>
 </header>
