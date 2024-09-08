@@ -1,6 +1,6 @@
 import data from './data.json' with { type: 'json' };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   async function loadHTML(url) {
     return fetch(url)
       .then(response => response.text())
@@ -13,16 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const main = document.querySelector('main');
 
     await Promise.all([
-      loadHTML('./components/header.html'),
-      loadHTML('./components/footer.html')
+      loadHTML('/components/header.html'),
+      loadHTML('/components/footer.html')
     ])
-    .then(([header, footer]) => {
+    .then(async ([header, footer]) => {
       body.insertAdjacentHTML('afterbegin', header);
       body.insertAdjacentHTML('beforeend', footer);
 
       main.innerHTML = body.querySelector('main').innerHTML;
 
       loadCarouselItems('clothes', data.clothes);
+      loadCarouselItems('beauty', data.beauty);
+      loadCarouselItems('house', data.house);
+      loadCarouselItems('tech', data.tech);
 
       disableAutoplayOnInteraction();
     });
@@ -30,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadCarouselItems(id, products) {
     const carouselInner = document.querySelector(`#${id} .carousel-inner`);
+
+    if (!carouselInner) return;
+
     let isFirstItem = true;
     const productTemplate = await loadHTML('./components/product.html');
 
@@ -78,6 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function disableAutoplayOnInteraction() {
     const carouselElement = document.querySelector('#clothes');
+
+    if (!carouselElement) return;
+
     const carouselInstance = new bootstrap.Carousel(carouselElement, {
       interval: false,
       ride: false
@@ -86,5 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
     carouselElement.addEventListener('slid.bs.carousel', () => carouselInstance.pause());
   }
 
-  loadComponents();
+  function toggleMenuIcon() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuIcon = menuToggle.querySelector('i');
+
+    menuToggle.addEventListener('click', () => {
+      if (menuIcon.classList.contains('fa-bars')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      } else {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      }
+    });
+  }
+
+  await loadComponents();
+  toggleMenuIcon();
 });
