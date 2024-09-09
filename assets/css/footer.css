@@ -1,0 +1,19 @@
+#footer {
+  background-color: #228B22;
+
+  .row {
+    align-items: center;
+
+    p { margin: 0; }
+
+    a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #000;
+    }
+
+    div {
+      &:first-child { margin-bottom: 5px; }
+    }
+  }
+}
