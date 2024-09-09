@@ -26,9 +26,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       loadCarouselItems('beauty', data.beauty);
       loadCarouselItems('house', data.house);
       loadCarouselItems('tech', data.tech);
-
-      disableAutoplayOnInteraction();
     });
+
+    disableAutoplayOnInteraction('clothes');
+    disableAutoplayOnInteraction('beauty');
+    disableAutoplayOnInteraction('house');
+    disableAutoplayOnInteraction('tech');
   }
 
   async function loadCarouselItems(id, products) {
@@ -82,8 +85,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  function disableAutoplayOnInteraction() {
-    const carouselElement = document.querySelector('#clothes');
+  function disableAutoplayOnInteraction(id) {
+    const carouselElement = document.querySelector(`#${id}`);
 
     if (!carouselElement) return;
 
