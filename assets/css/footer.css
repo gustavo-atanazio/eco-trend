@@ -4,7 +4,10 @@
   .row {
     align-items: center;
 
-    p { margin: 0; }
+    p {
+      font-weight: 600;
+      margin: 0;
+    }
 
     a {
       font-size: 2rem;
