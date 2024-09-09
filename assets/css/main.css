@@ -1,5 +1,6 @@
 @import url('header.css');
 @import url('footer.css');
+@import url('home.css');
 
 * {
   margin: 0;
@@ -9,12 +10,16 @@
 }
 
 /* Bootstrap */
-.carousel-control-prev { justify-content: flex-start; }
-.carousel-control-next { justify-content: flex-end; }
+.carousel {
+  margin-bottom: 1.5rem;
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
+  .carousel-control-prev { justify-content: flex-start; }
+  .carousel-control-next { justify-content: flex-end; }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1);
+  }
+
+  .carousel-inner { padding: 0 2rem; }
 }
-
-.carousel-inner { padding: 0 2rem; }
