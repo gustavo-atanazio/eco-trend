@@ -1,8 +1,14 @@
 #header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+
+  padding: 1rem;
+  background-color: #FFF;
 
   #menu-toggle {
     border: none;
