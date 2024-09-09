@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       main.innerHTML = body.querySelector('main').innerHTML;
 
-      loadCarouselItems('clothes', data.clothes);
-      loadCarouselItems('beauty', data.beauty);
-      loadCarouselItems('house', data.house);
-      loadCarouselItems('tech', data.tech);
+      await loadCarouselItems('clothes', data.clothes);
+      await loadCarouselItems('beauty', data.beauty);
+      await loadCarouselItems('house', data.house);
+      await loadCarouselItems('tech', data.tech);
     });
 
     disableAutoplayOnInteraction('clothes');
@@ -113,6 +113,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  function appendButtonURL() {
+    const buyButtons = document.querySelectorAll('.buy-btn');
+
+    if (buyButtons.length === 0) return;
+
+    const products = [...data.clothes, ...data.beauty, ...data.house, ...data.tech];
+
+    buyButtons.forEach((button, index) => {
+      button.addEventListener('click', event => {
+        event.preventDefault();
+
+        const productID = products[index].id;
+
+        const url = new URL('/pages/details.html', window.location.origin);
+        url.searchParams.append('productID', productID);
+
+        window.location.href = url;
+      });
+    });
+  }
+
   await loadComponents();
   toggleMenuIcon();
+  appendButtonURL();
 });
