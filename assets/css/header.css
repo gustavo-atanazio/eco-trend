@@ -7,8 +7,8 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem;
-  background-color: #FFF;
+  padding-bottom: 0;
+  background-color: #228B22;
 
   #menu-toggle {
     border: none;
@@ -24,6 +24,33 @@
   .navbar-brand {
     @media only screen and (max-width: 768px) { margin-right: 0; }
   }
+
+  .navbar-collapse {
+    padding: 0 1.5rem 10px;
+    background-color: #FFF;
+  }
   
   i { font-size: 2rem; }
+
+  @media only screen and (min-width: 769px) {
+    padding-bottom: 8px;
+
+    .navbar-collapse {
+      gap: 25px;
+      padding: 0;
+      background-color: transparent;
+
+      .navbar-nav {
+        gap: 25px;
+        margin: 0;
+
+        .nav-link { color: #FFF; }
+      }
+
+      .btn-outline-success {
+        border: 1.5px solid #FFF;
+        color: #FFF;
+      }
+    }
+  }
 }
