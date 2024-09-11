@@ -40,8 +40,6 @@
   i { font-size: 2rem; }
 
   @media only screen and (min-width: 769px) {
-    padding-bottom: 8px;
-
     .navbar-collapse {
       gap: 25px;
       padding: 0;
