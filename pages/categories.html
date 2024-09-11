@@ -24,7 +24,163 @@
 
   <body>
     <main>
-      Categorias
+      <div class='container mt-5'>
+        <div class='row'>
+          <div class='col-12 col-lg-3 mb-4 d-none d-lg-block'>
+            <h5>Filtrar por</h5>
+            
+            <div class='mb-4'>
+              <label class='form-label'>Preço</label>
+
+              <select class='form-select'>
+                <option selected>Selecione o preço</option>
+                <option value='1'>R$0 - R$50</option>
+                <option value='2'>R$51 - R$100</option>
+                <option value='3'>R$101 - R$200</option>
+                <option value='4'>Acima de R$200</option>
+              </select>
+            </div>
+            
+            <div class='mb-4'>
+              <label class='form-label'>Tipo de Produto</label>
+
+              <div class='form-check'>
+                <input class='form-check-input' type='checkbox' value='' id='roupa'>
+                <label class='form-check-label' for='roupa'>Roupas</label>
+              </div>
+
+              <div class='form-check'>
+                <input class='form-check-input' type='checkbox' value='' id='beleza'>
+                <label class='form-check-label' for='beleza'>Produtos de Beleza</label>
+              </div>
+
+              <div class='form-check'>
+                <input class='form-check-input' type='checkbox' value='' id='casa'>
+                <label class='form-check-label' for='casa'>Produtos para Casa</label>
+              </div>
+
+              <div class='form-check'>
+                <input class='form-check-input' type='checkbox' value='' id='tecnologia'>
+                <label class='form-check-label' for='tecnologia'>Tecnologia</label>
+              </div>
+            </div>
+            
+            <div class='mb-4'>
+              <label class='form-label'>Marca</label>
+
+              <select class='form-select'>
+                <option selected>Selecione a marca</option>
+                <option value='1'>Marca A</option>
+                <option value='2'>Marca B</option>
+                <option value='3'>Marca C</option>
+              </select>
+            </div>
+            
+            <button class='btn btn-success w-100'>Aplicar Filtros</button>
+          </div>
+      
+          <!-- Filtro Mobile -->
+          <div class='col-12 d-lg-none mb-4'>
+            <button class='btn btn-outline-secondary w-100' type='button' data-bs-toggle='collapse' data-bs-target='#filterDropdown' aria-expanded='false' aria-controls='filterDropdown'>
+              Filtros
+            </button>
+
+            <div class='collapse mt-2' id='filterDropdown'>
+              <div class='card card-body'>
+                <h5>Filtrar por</h5>
+      
+                <div class='mb-4'>
+                  <label class='form-label'>Preço</label>
+
+                  <select class='form-select'>
+                    <option selected>Selecione o preço</option>
+                    <option value='1'>R$0 - R$50</option>
+                    <option value='2'>R$51 - R$100</option>
+                    <option value='3'>R$101 - R$200</option>
+                    <option value='4'>Acima de R$200</option>
+                  </select>
+                </div>
+      
+                <div class='mb-4'>
+                  <label class='form-label'>Tipo de Produto</label>
+
+                  <div class='form-check'>
+                    <input class='form-check-input' type='checkbox' value='' id='roupaMobile'>
+                    <label class='form-check-label' for='roupaMobile'>Roupas</label>
+                  </div>
+
+                  <div class='form-check'>
+                    <input class='form-check-input' type='checkbox' value='' id='belezaMobile'>
+                    <label class='form-check-label' for='belezaMobile'>Produtos de Beleza</label>
+                  </div>
+
+                  <div class='form-check'>
+                    <input class='form-check-input' type='checkbox' value='' id='casaMobile'>
+                    <label class='form-check-label' for='casaMobile'>Produtos para Casa</label>
+                  </div>
+
+                  <div class='form-check'>
+                    <input class='form-check-input' type='checkbox' value='' id='tecnologiaMobile'>
+                    <label class='form-check-label' for='tecnologiaMobile'>Tecnologia</label>
+                  </div>
+                </div>
+      
+                <div class='mb-4'>
+                  <label class='form-label'>Marca</label>
+
+                  <select class='form-select'>
+                    <option selected>Selecione a marca</option>
+                    <option value='1'>Marca A</option>
+                    <option value='2'>Marca B</option>
+                    <option value='3'>Marca C</option>
+                  </select>
+                </div>
+      
+                <button class='btn btn-success w-100'>Aplicar Filtros</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class='col-12 col-lg-9'>
+            <h2>Produtos</h2>
+
+            <div id='shelf' class='row'>
+              <div class='col-6 col-md-4 mb-4'>
+                <div class='card'>
+                  <img src='https://placehold.co/200x200' class='card-img-top' alt='Produto'>
+
+                  <div class='card-body'>
+                    <h5 class='card-title'>Produto 1</h5>
+                    <p class='card-text'>Descrição do produto.</p>
+                    <a href='#' class='btn btn-primary'>Ver mais</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
     </main>
+
+    <script defer>
+      // Script para carregar produtos genéricos
+      
+      const target = document.querySelector('#shelf');
+      const template = `
+        <div class='col-6 col-md-4 mb-4'>
+          <div class='card'>
+            <img src='https://placehold.co/200x200' class='card-img-top' alt='Produto'>
+
+            <div class='card-body'>
+              <h5 class='card-title'>Produto 1</h5>
+              <p class='card-text'>Descrição do produto.</p>
+              <a href='#' class='btn btn-primary'>Ver mais</a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      for (let i = 0; i < 20; i++) target.innerHTML += template;
+    </script>
   </body>
 </html>
