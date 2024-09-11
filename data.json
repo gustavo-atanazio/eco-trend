@@ -27,9 +27,7 @@
       "price": 20,
       "imgPath": "assets/img/produto1.jpg",
       "id": 4
-    }
-  ],
-  "beauty": [
+    },
     {
       "name": "Regata",
       "description": "Descrição breve do produto.",
@@ -59,7 +57,7 @@
       "id": 8
     }
   ],
-  "house": [
+  "beauty": [
     {
       "name": "Regata",
       "description": "Descrição breve do produto.",
@@ -87,9 +85,7 @@
       "price": 20,
       "imgPath": "assets/img/produto1.jpg",
       "id": 12
-    }
-  ],
-  "tech": [
+    },
     {
       "name": "Regata",
       "description": "Descrição breve do produto.",
@@ -117,6 +113,122 @@
       "price": 20,
       "imgPath": "assets/img/produto1.jpg",
       "id": 16
+    }
+  ],
+  "house": [
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 17
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 18
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 19
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 20
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 21
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 22
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 23
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 24
+    }
+  ],
+  "tech": [
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 25
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 26
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 27
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 28
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 29
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 30
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 31
+    },
+    {
+      "name": "Regata",
+      "description": "Descrição breve do produto.",
+      "price": 20,
+      "imgPath": "assets/img/produto1.jpg",
+      "id": 32
     }
   ]
 }
